@@ -1,0 +1,19 @@
+CREATE TABLE LanguageTable (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    url TEXT NOT NULL,
+    snippet TEXT,
+    extension TEXT
+);
+
+insertLanguage:
+INSERT OR REPLACE INTO LanguageTable (id, name, url, snippet, extension)
+VALUES (?, ?, ?, ?, ?);
+
+selectLanguages:
+SELECT * FROM LanguageTable;
+
+selectLanguageByName:
+SELECT * FROM LanguageTable WHERE name = :name;
+
+
