@@ -16,17 +16,20 @@ compose-plugin = "1.5.11"
 junit = "4.13.2"
 kotlin = "1.9.21"
 # manually added
-voyager = "1.0.0-rc07"
+voyager = "1.0.0-rc10"
 composeImageLoader = "1.6.7"
 napier = "2.6.1"
 kotlinx-coroutines = "1.7.3"
-ktor = "2.3.5"
+ktor = "2.3.6"
 composeIcons = "1.1.0"
 kotlinx-serialization = "1.6.0"
 #codeview = "0.6.0"
 highlights = "0.7.1"
 kotlinx-datetime = "0.5.0"
 sqldelight-version = "2.0.1"
+
+moko-mvvm ="0.16.1"
+
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -57,7 +60,7 @@ ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx
 content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
 composeIcons-featherIcons = { module = "br.com.devsrsouza.compose.icons:feather", version.ref = "composeIcons" }
-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+#kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 #codeview = {module = "dev.snipme:kodeview", version.ref = "codeview"}
 highlight = {module = "dev.snipme:highlights", version.ref = "highlights"}
 voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
@@ -66,6 +69,8 @@ sqldelight-android-driver = { module = "app.cash.sqldelight:android-driver", ver
 sqldelight-native-driver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight-version" }
 sqldelight-sqlite-driver = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight-version" }
 
+moko-mvvm-core = { module = "dev.icerock.moko:mvvm-core", version.ref = "moko-mvvm" }
+moko-mvvm-compose = { module = "dev.icerock.moko:mvvm-compose", version.ref = "moko-mvvm" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

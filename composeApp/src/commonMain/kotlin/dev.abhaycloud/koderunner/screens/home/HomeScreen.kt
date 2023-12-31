@@ -53,6 +53,7 @@ import dev.abhaycloud.koderunner.di.AppModule
 import dev.abhaycloud.koderunner.platform.platformName
 import dev.abhaycloud.koderunner.screens.snippet.SnippetsScreen
 import dev.abhaycloud.koderunner.utils.Utils
+import dev.abhaycloud.koderunner.utils.Utils.printLogs
 import dev.abhaycloud.koderunner.utils.screenSize
 import dev.abhaycloud.koderunner.viewmodel.HomeScreenViewModel
 import org.jetbrains.compose.resources.ExperimentalResourceApi
@@ -83,7 +84,7 @@ class HomeScreen(private val appModule: AppModule) : Screen {
         } else {
             screenSize().width / 2 - 32
         }
-//        printLogs("${screenSize().width} ${screenSize().height}")
+        printLogs("${screenSize().width} ${screenSize().height}")
 
 
         LazyColumn(

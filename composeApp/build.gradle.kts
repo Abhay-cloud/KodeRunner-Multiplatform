@@ -40,11 +40,11 @@ kotlin {
         }
     }
 
-    ios()
+//    ios()
     
     sourceSets {
         val desktopMain by getting
-        val iosMain by getting
+//        val iosMain by getting
         
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
@@ -66,7 +66,7 @@ kotlin {
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.ktor.core)
             implementation(libs.composeIcons.featherIcons)
-            implementation(libs.kotlinx.serialization.json)
+//            implementation(libs.kotlinx.serialization.json)
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.content.negotiation)
             implementation(libs.logging)
@@ -76,6 +76,9 @@ kotlin {
             implementation(compose.components.resources)
             implementation(libs.voyager.transitions)
             implementation(libs.kotlinx.datetime.core)
+
+            implementation(libs.moko.mvvm.core)
+            implementation(libs.moko.mvvm.compose)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
