@@ -54,6 +54,7 @@ import dev.abhaycloud.koderunner.platform.platformName
 import dev.abhaycloud.koderunner.screens.snippet.SnippetsScreen
 import dev.abhaycloud.koderunner.utils.Utils
 import dev.abhaycloud.koderunner.utils.Utils.printLogs
+import dev.abhaycloud.koderunner.utils.Utils.pxToDp
 import dev.abhaycloud.koderunner.utils.screenSize
 import dev.abhaycloud.koderunner.viewmodel.HomeScreenViewModel
 import org.jetbrains.compose.resources.ExperimentalResourceApi
@@ -79,10 +80,16 @@ class HomeScreen(private val appModule: AppModule) : Screen {
         val allLanguagesList = viewModel.allLanguagesList.collectAsState()
         val searchText = remember { mutableStateOf("") }
         val searchTextFocusManager = LocalFocusManager.current
-        val width = if (platformName == Utils.platformNameDesktop) {
-            screenSize().width / 5 - 36
-        } else {
-            screenSize().width / 2 - 32
+        val width = when (platformName) {
+            Utils.platformNameDesktop -> {
+                (screenSize().width / 5 - 36).dp
+            }
+            Utils.platformNameIOS -> {
+                (screenSize().width.pxToDp() / 2 - 32.dp)
+            }
+            else -> {
+                (screenSize().width / 2 - 32).dp
+            }
         }
         printLogs("${screenSize().width} ${screenSize().height}")
 
@@ -170,7 +177,7 @@ class HomeScreen(private val appModule: AppModule) : Screen {
                             repeat(availableLanguagesList.value.size) {
                                 Box(
                                     modifier = Modifier.height(150.dp)
-                                        .width(width.dp)
+                                        .width(width)
                                         .clip(RoundedCornerShape(12.dp))
                                         .background(Color.White)
                                         .border(

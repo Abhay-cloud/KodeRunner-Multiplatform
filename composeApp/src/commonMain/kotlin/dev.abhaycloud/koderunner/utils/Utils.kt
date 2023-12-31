@@ -1,5 +1,7 @@
 package dev.abhaycloud.koderunner.utils
 
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalDensity
 import kotlinx.datetime.Instant
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
@@ -17,6 +19,10 @@ object Utils {
         val localDateTime = instant.toLocalDateTime(TimeZone.currentSystemDefault()).date
         return "${localDateTime.dayOfMonth}/${localDateTime.month.ordinal+1}/${localDateTime.year}"
     }
+
+    @Composable
+    fun Int.pxToDp() = with(LocalDensity.current) { this@pxToDp.toDp() }
+
 }
 
 data class ScreenDimension(
