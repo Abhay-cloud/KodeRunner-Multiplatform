@@ -8,7 +8,7 @@ import java.awt.Dimension
 
 fun main() = application {
     Window(
-        title = "CodeRunner",
+        title = "KodeRunner",
 //        icon = painterResource("app_logo.png"),
         state = rememberWindowState(width = 1280.dp, height = 720.dp),
          resizable = false,
