@@ -39,16 +39,11 @@ class HomeScreenViewModel(private val codeRepository: CodeRepository, private va
     }
 
     private fun getAvailableLanguages(){
-        printLogs("before coruoutine")
         coroutineScope.launch {
-            printLogs("inside scope")
             kotlin.runCatching {
-                printLogs("inside runcatching")
                 _languageList.value = LanguageUiState.Loading
-                printLogs("ti")
                 val result = codeRepository.getAvailableLanguages()
 
-                printLogs("VM - result $result")
                 when(result){
                     is NetworkResponse.Loading -> {
                         _languageList.value = LanguageUiState.Loading
@@ -66,8 +61,6 @@ class HomeScreenViewModel(private val codeRepository: CodeRepository, private va
                     }
                 }
             }.onFailure {
-                printLogs("VM - exception $it")
-
                 _languageList.value = LanguageUiState.Error(it.message.toString())
             }
         }
