@@ -155,6 +155,7 @@ class SnippetsViewModel(private val codeRepository: CodeRepository, private val 
             .replace("&amp;", "&")
             .replace("&nbsp;", " ")
             .replace("&copy;", "©")
+            .replace("&#39;", "'")
             .replace("\\n", "\n")
             .replace("\\t", "\t")
             .replace("\\r", "\r")
