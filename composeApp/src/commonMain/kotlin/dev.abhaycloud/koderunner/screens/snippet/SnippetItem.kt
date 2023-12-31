@@ -51,7 +51,7 @@ fun SnippetItem(snippetItem: SnippetsModelItem, isPlatformDesktop: Boolean, modi
             modifier = Modifier.padding( if(isPlatformDesktop) 24.dp else 16.dp)
         ) {
             Image(
-                painterResource("languages/kotlin.png"),
+                painterResource("languages/${snippetItem.language}.png"),
                 modifier = Modifier.size( if(isPlatformDesktop) 72.dp else 33.dp),
                 contentDescription = "language"
             )
