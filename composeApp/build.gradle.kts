@@ -77,8 +77,6 @@ kotlin {
             implementation(libs.voyager.transitions)
             implementation(libs.kotlinx.datetime.core)
 
-            implementation(libs.moko.mvvm.core)
-            implementation(libs.moko.mvvm.compose)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
