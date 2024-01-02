@@ -1,5 +1,8 @@
 # KodeRunner - Compose Your Code, Anywhere, Anytime.
 
+![kotlin-version](https://img.shields.io/badge/kotlin-1.9.21-blue)
+[![Hits](https://hits.sh/github.com/Abhay-cloud/KodeRunner-Multiplatform.svg?label=VIEWS)](https://hits.sh/github.com/Abhay-cloud/KodeRunner-Multiplatform/)
+
 ![banner](./screenshots/kode-banner.png)
 
 KodeRunner is a cross-platform application built with Kotlin Multiplatform, supporting Android, iOS, Windows, Mac, Linux. Run code seamlessly across platforms, explore public snippets, and unleash the power of 35+ programming languages.
